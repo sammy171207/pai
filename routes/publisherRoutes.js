@@ -6,7 +6,9 @@ const router = express.Router();
 router.post('/', async (req, res) => {
   try {
     const publiser = await Publiser.create(req.body);
+
     res.status(201).json(publiser);
+
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

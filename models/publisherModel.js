@@ -4,7 +4,8 @@ const mongoose=require('mongoose')
 // yearEstablished: Number, must be a minimum of 1950
 const publiserScheme=new mongoose.Schema({
  name:{
-    type:String
+    type:String,
+    unique:true
  },
  location:{
     type:String
